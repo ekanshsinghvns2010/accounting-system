@@ -11,10 +11,163 @@
 
 <body>
 
-    <h1>Accounting System</h1>
+    <div class="app">
 
-    <p id="status">System loading...</p>
+        <!-- Sidebar -->
+        <aside class="sidebar">
+
+            <div class="logo">
+                <span>AS</span>
+                <div>
+                    <h2>Accounting</h2>
+                    <p>System</p>
+                </div>
+            </div>
+
+            <nav>
+
+                <button class="nav-item active">
+                    <span>⌂</span>
+                    Dashboard
+                </button>
+
+                <button class="nav-item">
+                    <span>✎</span>
+                    Journal
+                </button>
+
+                <button class="nav-item">
+                    <span>▤</span>
+                    Ledger
+                </button>
+
+                <button class="nav-item">
+                    <span>⚖</span>
+                    Trial Balance
+                </button>
+
+                <button class="nav-item">
+                    <span>₹</span>
+                    Cash Book
+                </button>
+
+                <button class="nav-item">
+                    <span>▣</span>
+                    Invoices
+                </button>
+
+                <button class="nav-item">
+                    <span>◈</span>
+                    Inventory
+                </button>
+
+                <button class="nav-item">
+                    <span>▥</span>
+                    Reports
+                </button>
+
+            </nav>
+
+        </aside>
+
+
+        <!-- Main Content -->
+        <main class="main">
+
+            <header class="topbar">
+
+                <div>
+                    <p class="eyebrow">OVERVIEW</p>
+                    <h1>Dashboard</h1>
+                </div>
+
+                <div class="system-status">
+                    <span></span>
+                    System Ready
+                </div>
+
+            </header>
+
+
+            <!-- Financial Cards -->
+            <section class="cards">
+
+                <div class="card">
+                    <p>Total Revenue</p>
+                    <h2 id="revenue">₹0</h2>
+                    <small>This month</small>
+                </div>
+
+                <div class="card">
+                    <p>Total Expenses</p>
+                    <h2 id="expenses">₹0</h2>
+                    <small>This month</small>
+                </div>
+
+                <div class="card">
+                    <p>Net Profit</p>
+                    <h2 id="profit">₹0</h2>
+                    <small>Current period</small>
+                </div>
+
+                <div class="card">
+                    <p>Transactions</p>
+                    <h2 id="transactions">0</h2>
+                    <small>Recorded</small>
+                </div>
+
+            </section>
+
+
+            <!-- Dashboard Content -->
+            <section class="dashboard-grid">
+
+                <div class="panel chart-panel">
+
+                    <div class="panel-header">
+                        <div>
+                            <p class="eyebrow">FINANCIAL OVERVIEW</p>
+                            <h2>Financial Activity</h2>
+                        </div>
+                    </div>
+
+                    <div class="chart-placeholder">
+                        <div class="chart-line"></div>
+
+                        <span>Chart coming soon</span>
+                    </div>
+
+                </div>
+
+
+                <div class="panel">
+
+                    <div class="panel-header">
+                        <div>
+                            <p class="eyebrow">ACCOUNTING</p>
+                            <h2>Quick Actions</h2>
+                        </div>
+                    </div>
+
+                    <div class="quick-actions">
+
+                        <button>+ Journal Entry</button>
+                        <button>+ Invoice</button>
+                        <button>+ Expense</button>
+                        <button>+ Customer</button>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
 
     <script src="script.js"></script>
+
 </body>
 </html>
