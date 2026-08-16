@@ -5,22 +5,335 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: #0f172a;
-    color: white;
+    background: #0b1120;
+    color: #f8fafc;
+}
+
+button {
+    font-family: inherit;
+}
+
+.app {
+    min-height: 100vh;
+    display: flex;
+}
+
+
+/* SIDEBAR */
+
+.sidebar {
+    width: 250px;
+    min-height: 100vh;
+
+    background: #111827;
+    border-right: 1px solid #1e293b;
+
+    padding: 24px 16px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 8px;
+    margin-bottom: 35px;
+}
+
+.logo > span {
+    width: 42px;
+    height: 42px;
 
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
 
-    min-height: 100vh;
+    border-radius: 12px;
+
+    background: #2563eb;
+    font-weight: bold;
 }
 
-h1 {
-    font-size: 42px;
-    margin-bottom: 10px;
+.logo h2 {
+    margin: 0;
+    font-size: 17px;
 }
 
-p {
+.logo p {
+    margin: 3px 0 0;
+    color: #64748b;
+    font-size: 12px;
+}
+
+
+/* NAVIGATION */
+
+nav {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.nav-item {
+    width: 100%;
+
+    border: none;
+    background: transparent;
+
     color: #94a3b8;
+
+    padding: 12px;
+
+    border-radius: 10px;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    font-size: 14px;
+}
+
+.nav-item span {
+    display: inline-block;
+    width: 28px;
+}
+
+.nav-item:hover {
+    background: #1e293b;
+    color: white;
+}
+
+.nav-item.active {
+    background: #1d4ed8;
+    color: white;
+}
+
+
+/* MAIN */
+
+.main {
+    flex: 1;
+    padding: 32px;
+    overflow: hidden;
+}
+
+.topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 30px;
+}
+
+.topbar h1 {
+    margin: 5px 0 0;
+    font-size: 32px;
+}
+
+.eyebrow {
+    margin: 0;
+
+    font-size: 11px;
+    letter-spacing: 1.5px;
+
+    color: #64748b;
+    font-weight: bold;
+}
+
+.system-status {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 9px 14px;
+
+    background: #111827;
+    border: 1px solid #1e293b;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+    color: #94a3b8;
+}
+
+.system-status span {
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: #22c55e;
+}
+
+
+/* CARDS */
+
+.cards {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 18px;
+
+    margin-bottom: 24px;
+}
+
+.card {
+    padding: 22px;
+
+    background: #111827;
+
+    border: 1px solid #1e293b;
+
+    border-radius: 16px;
+}
+
+.card p {
+    margin: 0;
+
+    color: #94a3b8;
+
+    font-size: 13px;
+}
+
+.card h2 {
+    margin: 12px 0 5px;
+
+    font-size: 28px;
+}
+
+.card small {
+    color: #64748b;
+}
+
+
+/* PANELS */
+
+.dashboard-grid {
+    display: grid;
+
+    grid-template-columns: 2fr 1fr;
+
+    gap: 20px;
+}
+
+.panel {
+    background: #111827;
+
+    border: 1px solid #1e293b;
+
+    border-radius: 16px;
+
+    padding: 22px;
+}
+
+.panel-header h2 {
+    margin: 6px 0 0;
+
+    font-size: 18px;
+}
+
+
+/* CHART */
+
+.chart-placeholder {
+    height: 280px;
+
+    margin-top: 20px;
+
+    border-radius: 12px;
+
+    background: #0f172a;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #475569;
+
+    position: relative;
+}
+
+.chart-line {
+    position: absolute;
+
+    width: 70%;
+    height: 2px;
+
+    background: #2563eb;
+
+    transform: rotate(-8deg);
+}
+
+
+/* QUICK ACTIONS */
+
+.quick-actions {
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+
+    margin-top: 20px;
+}
+
+.quick-actions button {
+    padding: 13px;
+
+    border: 1px solid #1e293b;
+
+    border-radius: 10px;
+
+    background: #0f172a;
+
+    color: #cbd5e1;
+
+    cursor: pointer;
+
+    text-align: left;
+}
+
+.quick-actions button:hover {
+    background: #1e293b;
+    color: white;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 900px) {
+
+    .sidebar {
+        width: 75px;
+    }
+
+    .logo div,
+    .nav-item {
+        font-size: 0;
+    }
+
+    .nav-item span {
+        font-size: 18px;
+    }
+
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .main {
+        padding: 18px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
 }
