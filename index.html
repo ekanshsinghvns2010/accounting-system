@@ -2,7 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
     <title>Accounting System</title>
 
@@ -13,57 +16,58 @@
 
     <div class="app">
 
-        <!-- Sidebar -->
+        <!-- SIDEBAR -->
         <aside class="sidebar">
 
             <div class="logo">
-                <span>AS</span>
-                <div>
+                <div class="logo-mark">AS</div>
+
+                <div class="logo-text">
                     <h2>Accounting</h2>
                     <p>System</p>
                 </div>
             </div>
 
-            <nav>
+            <nav class="navigation">
 
-                <button class="nav-item active">
-                    <span>⌂</span>
-                    Dashboard
+                <button class="nav-item active" type="button">
+                    <span class="nav-icon">⌂</span>
+                    <span>Dashboard</span>
                 </button>
 
-                <button class="nav-item">
-                    <span>✎</span>
-                    Journal
+                <button class="nav-item" type="button">
+                    <span class="nav-icon">✎</span>
+                    <span>Journal</span>
                 </button>
 
-                <button class="nav-item">
-                    <span>▤</span>
-                    Ledger
+                <button class="nav-item" type="button">
+                    <span class="nav-icon">▤</span>
+                    <span>Ledger</span>
                 </button>
 
-                <button class="nav-item">
-                    <span>⚖</span>
-                    Trial Balance
+                <button class="nav-item" type="button">
+                    <span class="nav-icon">⚖</span>
+                    <span>Trial Balance</span>
                 </button>
 
-                <button class="nav-item">
-                    <span>₹</span>
-                    Cash Book
+                <button class="nav-item" type="button">
+                    <span class="nav-icon">₹</span>
+                    <span>Cash Book</span>
                 </button>
 
-                <button class="nav-item">
-                    <span>▣</span>
-                    Invoices
+                <button class="nav-item" type="button">
+                    <span class="nav-icon">▣</span>
+                    <span>Invoices</span>
                 </button>
 
-                <button class="nav-item">
-                    <span>◈</span>
-                    Inventory
+                <button class="nav-item" type="button">
+                    <span class="nav-icon">◈</span>
+                    <span>Inventory</span>
                 </button>
 
-                <button class="nav-item">
-                    <span>▥</span>
-                    Reports
+                <button class="nav-item" type="button">
+                    <span class="nav-icon">▥</span>
+                    <span>Reports</span>
                 </button>
 
             </nav>
@@ -71,9 +75,10 @@
         </aside>
 
 
-        <!-- Main Content -->
+        <!-- MAIN -->
         <main class="main">
 
+            <!-- TOP BAR -->
             <header class="topbar">
 
                 <div>
@@ -82,81 +87,161 @@
                 </div>
 
                 <div class="system-status">
-                    <span></span>
-                    System Ready
+                    <span class="status-dot"></span>
+                    <span>System Ready</span>
                 </div>
 
             </header>
 
 
-            <!-- Financial Cards -->
+            <!-- FINANCIAL CARDS -->
             <section class="cards">
 
-                <div class="card">
+                <article class="card">
                     <p>Total Revenue</p>
                     <h2 id="revenue">₹0</h2>
                     <small>This month</small>
-                </div>
+                </article>
 
-                <div class="card">
+                <article class="card">
                     <p>Total Expenses</p>
                     <h2 id="expenses">₹0</h2>
                     <small>This month</small>
-                </div>
+                </article>
 
-                <div class="card">
+                <article class="card">
                     <p>Net Profit</p>
                     <h2 id="profit">₹0</h2>
                     <small>Current period</small>
-                </div>
+                </article>
 
-                <div class="card">
+                <article class="card">
                     <p>Transactions</p>
                     <h2 id="transactions">0</h2>
                     <small>Recorded</small>
-                </div>
+                </article>
 
             </section>
 
 
-            <!-- Dashboard Content -->
+            <!-- DASHBOARD GRID -->
             <section class="dashboard-grid">
 
-                <div class="panel chart-panel">
+                <!-- FINANCIAL OVERVIEW -->
+                <article class="panel chart-panel">
 
                     <div class="panel-header">
+
                         <div>
-                            <p class="eyebrow">FINANCIAL OVERVIEW</p>
+                            <p class="eyebrow">
+                                FINANCIAL OVERVIEW
+                            </p>
+
                             <h2>Financial Activity</h2>
                         </div>
+
                     </div>
 
                     <div class="chart-placeholder">
-                        <div class="chart-line"></div>
 
-                        <span>Chart coming soon</span>
+                        <div class="fake-chart">
+                            <div class="chart-bar bar-1"></div>
+                            <div class="chart-bar bar-2"></div>
+                            <div class="chart-bar bar-3"></div>
+                            <div class="chart-bar bar-4"></div>
+                            <div class="chart-bar bar-5"></div>
+                            <div class="chart-bar bar-6"></div>
+                        </div>
+
+                        <span class="chart-message">
+                            Chart coming soon
+                        </span>
+
                     </div>
 
-                </div>
+                </article>
 
 
-                <div class="panel">
+                <!-- QUICK ACTIONS -->
+                <article class="panel">
 
                     <div class="panel-header">
+
                         <div>
-                            <p class="eyebrow">ACCOUNTING</p>
+                            <p class="eyebrow">
+                                ACCOUNTING
+                            </p>
+
                             <h2>Quick Actions</h2>
                         </div>
+
                     </div>
 
                     <div class="quick-actions">
 
-                        <button>+ Journal Entry</button>
-                        <button>+ Invoice</button>
-                        <button>+ Expense</button>
-                        <button>+ Customer</button>
+                        <button
+                            class="action-button"
+                            type="button"
+                            id="journalButton"
+                        >
+                            <span>+</span>
+                            Journal Entry
+                        </button>
+
+                        <button
+                            class="action-button"
+                            type="button"
+                        >
+                            <span>+</span>
+                            Invoice
+                        </button>
+
+                        <button
+                            class="action-button"
+                            type="button"
+                        >
+                            <span>+</span>
+                            Expense
+                        </button>
+
+                        <button
+                            class="action-button"
+                            type="button"
+                        >
+                            <span>+</span>
+                            Customer
+                        </button>
 
                     </div>
+
+                </article>
+
+            </section>
+
+
+            <!-- STEP 3 PREVIEW -->
+            <section class="panel step-preview">
+
+                <div>
+                    <p class="eyebrow">NEXT MODULE</p>
+                    <h2>Journal & Double-Entry Accounting</h2>
+
+                    <p class="description">
+                        Every transaction will be recorded using
+                        debit and credit entries. The system will
+                        verify that total debit equals total credit.
+                    </p>
+                </div>
+
+                <div class="accounting-flow">
+
+                    <span>Transaction</span>
+                    <b>→</b>
+                    <span>Journal</span>
+                    <b>→</b>
+                    <span>Ledger</span>
+                    <b>→</b>
+                    <span>Trial Balance</span>
 
                 </div>
 
